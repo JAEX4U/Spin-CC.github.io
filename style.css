@@ -1,42 +1,60 @@
 body{
+margin:0;
+font-family:Arial;
 background:#0f172a;
 color:white;
-font-family:Arial;
-margin:0;
-text-align:center;
 }
 
-header{
-padding:30px;
+nav{
+display:flex;
+justify-content:space-between;
+padding:15px 40px;
 background:#111827;
 }
 
-.shop{
-display:grid;
-grid-template-columns:repeat(auto-fit,200px);
-gap:30px;
-justify-content:center;
-margin-top:40px;
+.logo{
+font-size:22px;
+font-weight:bold;
 }
 
-.card{
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+header{
+text-align:center;
+padding:60px 20px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,250px);
+gap:30px;
+justify-content:center;
+padding:40px;
+}
+
+.product{
 background:#1f2937;
-padding:20px;
+padding:25px;
 border-radius:12px;
+text-align:center;
 transition:0.3s;
 }
 
-.card:hover{
+.product:hover{
 transform:translateY(-10px);
-box-shadow:0 10px 20px rgba(0,0,0,0.5);
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
 
-.card img{
-width:80px;
+.product img{
+width:90px;
 }
 
 button{
-background:#22c55e;
+background:#3b82f6;
 border:none;
 padding:10px 20px;
 border-radius:6px;
@@ -46,11 +64,12 @@ margin-top:10px;
 }
 
 button:hover{
-background:#16a34a;
+background:#2563eb;
 }
 
 footer{
-margin-top:50px;
+text-align:center;
 padding:20px;
 background:#111827;
+margin-top:40px;
 }
