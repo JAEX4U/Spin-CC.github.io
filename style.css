@@ -1,6 +1,6 @@
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
 background:#071225;
 color:white;
 }
@@ -40,24 +40,50 @@ padding:80px 20px;
 
 .hero h2{
 font-size:36px;
-margin-bottom:10px;
 }
 
 .hero p{
 color:#bbb;
+max-width:600px;
+margin:auto;
+margin-top:10px;
+}
+
+.shop-button{
+display:inline-block;
+margin-top:20px;
+background:#3b82f6;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+
+/* info boxes */
+
+.info-section{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+max-width:900px;
+margin:60px auto;
+}
+
+.info-box{
+background:#0b1b36;
+padding:20px;
+border-radius:10px;
+text-align:center;
 }
 
 
 /* cards */
 
-.cards-section{
+.section-title{
 text-align:center;
 margin-top:40px;
-}
-
-.section-title{
-font-size:28px;
-margin-bottom:30px;
 }
 
 .card-container{
@@ -65,23 +91,14 @@ display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:25px;
 max-width:900px;
-margin:auto;
+margin:40px auto;
 }
 
 .gift-card{
 background:#0b1b36;
 padding:25px;
 border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
-transition:0.3s;
-}
-
-.gift-card:hover{
-transform:translateY(-8px);
-}
-
-.gift-card p{
-color:#ccc;
+text-align:center;
 }
 
 .gift-card button{
@@ -92,43 +109,23 @@ padding:10px 20px;
 border-radius:6px;
 color:white;
 cursor:pointer;
-font-weight:bold;
-}
-
-.gift-card button:hover{
-background:#2563eb;
 }
 
 
-/* why section */
+/* support */
 
-.why-section{
-margin-top:80px;
+.support-section{
 text-align:center;
-}
-
-.why-container{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-max-width:900px;
-margin:40px auto;
-}
-
-.why-box{
-background:#0b1b36;
-padding:20px;
-border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
+padding:80px;
 }
 
 
 /* footer */
 
 footer{
-margin-top:60px;
+background:#0b1b36;
 padding:20px;
 text-align:center;
-background:#0b1b36;
 color:#aaa;
+margin-top:50px;
 }
