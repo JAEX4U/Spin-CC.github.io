@@ -85,7 +85,6 @@ margin-top:30px;
 /* FEATURE BOX */
 
 .feature-box{
-background:#0b1b36;
 padding:20px;
 border-radius:10px;
 font-size:16px;
@@ -94,7 +93,26 @@ transition:0.3s;
 }
 
 .feature-box:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
+}
+
+
+/* COLORED BOXES */
+
+.box1{
+background:#1e3a8a;
+}
+
+.box2{
+background:#065f46;
+}
+
+.box3{
+background:#7c3aed;
+}
+
+.box4{
+background:#b45309;
 }
 
 
