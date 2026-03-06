@@ -1,141 +1,62 @@
 body{
-margin:0;
 font-family:Arial;
-background:#071225;
+background:#0f172a;
+margin:0;
 color:white;
 }
 
-/* header */
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background:#0b1b36;
-}
-
-header h1{
-color:#3b82f6;
+nav{
+background:#020617;
+padding:15px;
+text-align:center;
 }
 
 nav a{
 color:white;
-margin-left:20px;
+margin:0 15px;
 text-decoration:none;
 font-weight:bold;
 }
 
-nav a:hover{
-color:#3b82f6;
-}
-
-
-/* hero */
-
-.hero{
-text-align:center;
-padding:80px 20px;
-}
-
-.hero p{
-color:#bbb;
-max-width:600px;
-margin:auto;
-margin-top:10px;
-}
-
-.shop-button{
-display:inline-block;
-margin-top:20px;
-background:#3b82f6;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-}
-
-
-/* info boxes */
-
-.info-section{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-max-width:900px;
-margin:60px auto;
-}
-
-.info-box{
-background:#0b1b36;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-
-/* cards */
-
-.section-title{
+.title{
 text-align:center;
 margin-top:40px;
 }
 
-.card-container{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-max-width:900px;
-margin:40px auto;
+.shop-container{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:60px;
+flex-wrap:wrap;
 }
 
 .gift-card{
-background:#0b1b36;
+background:#1e293b;
 padding:25px;
 border-radius:12px;
+width:220px;
 text-align:center;
-
-opacity:0;
-transform:translateY(40px);
-transition:all 0.6s ease;
-}
-
-.gift-card.show{
-opacity:1;
-transform:translateY(0);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:0.3s;
 }
 
 .gift-card:hover{
 transform:scale(1.05);
-box-shadow:0 15px 30px rgba(0,0,0,0.6);
 }
 
 .gift-card button{
-margin-top:10px;
-background:#3b82f6;
-border:none;
+margin-top:15px;
 padding:10px 20px;
+border:none;
 border-radius:6px;
+background:#3b82f6;
 color:white;
 cursor:pointer;
+font-weight:bold;
+transition:0.3s;
 }
 
-
-/* support */
-
-.support-section{
-text-align:center;
-padding:80px;
-}
-
-
-/* footer */
-
-footer{
-background:#0b1b36;
-padding:20px;
-text-align:center;
-color:#aaa;
-margin-top:50px;
+.gift-card button:hover{
+background:#2563eb;
 }
