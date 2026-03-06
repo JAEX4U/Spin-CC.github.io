@@ -5,11 +5,20 @@ background:#0f172a;
 color:white;
 }
 
+
+/* NAVBAR */
+
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:15px 40px;
 background:#111827;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
 }
 
 nav ul{
@@ -19,51 +28,77 @@ gap:20px;
 }
 
 nav a{
-color:white;
 text-decoration:none;
+color:white;
 }
+
+
+/* HEADER */
 
 header{
 text-align:center;
-padding:80px;
+padding:80px 20px;
 }
 
-button{
+header p{
+max-width:600px;
+margin:auto;
+margin-top:15px;
+line-height:1.6;
+}
+
+
+/* MAIN BUTTON */
+
+.main-btn{
+margin-top:25px;
 background:#3b82f6;
 border:none;
-padding:10px 20px;
+padding:12px 25px;
 border-radius:6px;
 color:white;
 cursor:pointer;
+font-size:16px;
 }
 
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,250px);
-gap:30px;
-justify-content:center;
+.main-btn:hover{
+background:#2563eb;
+}
+
+
+/* WHY CHOOSE BOX */
+
+.why-box{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin:60px auto;
+background:#0b1b36;
 padding:40px;
+width:420px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
-.product{
-background:#1f2937;
+.why-box h2{
+margin-bottom:20px;
+}
+
+.features{
+width:100%;
+}
+
+.features p{
+font-size:16px;
+margin:12px 0;
+}
+
+
+/* FOOTER */
+
+footer{
+text-align:center;
 padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-.product img{
-width:80px;
-}
-
-.support{
-text-align:center;
-margin-top:40px;
-}
-
-input, textarea{
-width:250px;
-padding:10px;
-border-radius:5px;
-border:none;
+background:#111827;
+margin-top:60px;
 }
