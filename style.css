@@ -1,62 +1,220 @@
-body{
-font-family:Arial;
-background:#0f172a;
+/* RESET */
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f172a;
 color:white;
 }
 
-nav{
+/* NAVBAR */
+
+.navbar{
 background:#020617;
-padding:15px;
-text-align:center;
+padding:18px;
+display:flex;
+justify-content:center;
+gap:40px;
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
 }
 
-nav a{
+/* NAV LINKS */
+
+.nav-link{
+position:relative;
 color:white;
-margin:0 15px;
 text-decoration:none;
 font-weight:bold;
+font-size:16px;
+padding-bottom:5px;
+transition:0.3s;
 }
 
-.title{
-text-align:center;
-margin-top:40px;
+/* BLUE LINE EFFECT */
+
+.nav-link::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0%;
+height:2px;
+background:#3b82f6;
+transition:0.3s;
 }
+
+/* HOVER */
+
+.nav-link:hover{
+color:#3b82f6;
+}
+
+.nav-link:hover::after{
+width:100%;
+}
+
+/* ACTIVE PAGE */
+
+.active{
+color:#3b82f6;
+}
+
+.active::after{
+width:100%;
+}
+
+/* HERO SECTION */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#cbd5f5;
+font-size:18px;
+max-width:700px;
+margin:auto;
+}
+
+.hero button{
+margin-top:35px;
+padding:14px 35px;
+font-size:16px;
+background:#3b82f6;
+border:none;
+border-radius:8px;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#2563eb;
+transform:scale(1.05);
+}
+
+/* FEATURES */
+
+.features{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:80px 20px;
+flex-wrap:wrap;
+}
+
+.feature-box{
+background:#1e293b;
+padding:30px;
+width:250px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.feature-box:hover{
+transform:translateY(-10px);
+}
+
+.feature-box h3{
+margin-bottom:10px;
+}
+
+.feature-box p{
+color:#cbd5f5;
+font-size:14px;
+}
+
+/* SHOP PAGE */
 
 .shop-container{
 display:flex;
 justify-content:center;
-gap:40px;
-margin-top:60px;
 flex-wrap:wrap;
+gap:30px;
+padding:80px 20px;
 }
 
 .gift-card{
 background:#1e293b;
-padding:25px;
-border-radius:12px;
 width:220px;
+padding:20px;
+border-radius:12px;
 text-align:center;
 box-shadow:0 10px 25px rgba(0,0,0,0.4);
 transition:0.3s;
 }
 
 .gift-card:hover{
-transform:scale(1.05);
+transform:translateY(-10px) scale(1.03);
 }
 
+.gift-card img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.gift-card h3{
+margin-bottom:10px;
+}
+
+.gift-card p{
+color:#cbd5f5;
+margin-bottom:15px;
+}
+
+/* BUY BUTTON */
+
 .gift-card button{
-margin-top:15px;
-padding:10px 20px;
-border:none;
-border-radius:6px;
 background:#3b82f6;
+border:none;
+padding:10px 20px;
+border-radius:6px;
 color:white;
 cursor:pointer;
-font-weight:bold;
 transition:0.3s;
 }
 
 .gift-card button:hover{
 background:#2563eb;
+}
+
+/* SUPPORT PAGE */
+
+.support{
+text-align:center;
+padding:100px 20px;
+}
+
+.support h1{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.support p{
+color:#cbd5f5;
+margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+color:#94a3b8;
+margin-top:50px;
 }
