@@ -1,7 +1,9 @@
-// Gift card press animation
+// Wait until page loads
+document.addEventListener("DOMContentLoaded", () => {
 
 const cards = document.querySelectorAll(".gift-card");
 
+// Card press animation
 cards.forEach(card => {
 
 card.addEventListener("mousedown", () => {
@@ -19,25 +21,24 @@ card.style.transform = "scale(1)";
 });
 
 
-// Buy button click animation
-
+// Buy button animation
 const buttons = document.querySelectorAll(".gift-card button");
 
 buttons.forEach(button => {
 
 button.addEventListener("click", () => {
 
-const originalText = button.innerText;
+const text = button.innerText;
 
 button.innerText = "Added!";
 button.style.background = "#22c55e";
 
 setTimeout(() => {
-
-button.innerText = originalText;
+button.innerText = text;
 button.style.background = "#3b82f6";
-
 },2000);
+
+});
 
 });
 
