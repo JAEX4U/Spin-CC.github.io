@@ -1,48 +1,53 @@
-// Wait until page loads
-document.addEventListener("DOMContentLoaded", () => {
+// Run after page loads
+document.addEventListener("DOMContentLoaded", function () {
 
     const cards = document.querySelectorAll(".gift-card");
 
-    // Card press animation
-    cards.forEach(card => {
+    // If no cards found, stop script (prevents errors)
+    if (!cards.length) {
+        console.log("No gift cards found on this page.");
+        return;
+    }
+
+    // Card animation
+    cards.forEach(function(card) {
 
         // Hover effect
-        card.addEventListener("mouseenter", () => {
+        card.addEventListener("mouseenter", function () {
             card.style.transform = "scale(1.05)";
-            card.style.transition = "0.2s";
+            card.style.transition = "0.2s ease";
         });
 
-        card.addEventListener("mouseleave", () => {
+        card.addEventListener("mouseleave", function () {
             card.style.transform = "scale(1)";
         });
 
         // Press effect
-        card.addEventListener("mousedown", () => {
+        card.addEventListener("mousedown", function () {
             card.style.transform = "scale(0.95)";
         });
 
-        card.addEventListener("mouseup", () => {
+        card.addEventListener("mouseup", function () {
             card.style.transform = "scale(1.05)";
         });
 
     });
 
-
-    // Buy button animation
+    // Button animation
     const buttons = document.querySelectorAll(".gift-card button");
 
-    buttons.forEach(button => {
+    buttons.forEach(function(button) {
 
-        button.addEventListener("click", () => {
+        button.addEventListener("click", function () {
 
-            const text = button.innerText;
+            const originalText = button.innerText;
 
             button.innerText = "Added!";
-            button.style.background = "#22c55e";
+            button.style.backgroundColor = "#22c55e";
 
-            setTimeout(() => {
-                button.innerText = text;
-                button.style.background = "#3b82f6";
+            setTimeout(function () {
+                button.innerText = originalText;
+                button.style.backgroundColor = "#3b82f6";
             }, 2000);
 
         });
