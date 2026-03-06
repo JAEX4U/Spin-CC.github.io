@@ -1,27 +1,56 @@
 body{
-background:#111;
+background:#0f172a;
 color:white;
 font-family:Arial;
+margin:0;
 text-align:center;
 }
 
+header{
+padding:30px;
+background:#111827;
+}
+
 .shop{
-display:flex;
+display:grid;
+grid-template-columns:repeat(auto-fit,200px);
+gap:30px;
 justify-content:center;
-gap:20px;
-margin-top:50px;
+margin-top:40px;
 }
 
 .card{
-background:#222;
+background:#1f2937;
 padding:20px;
-border-radius:10px;
-width:200px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+
+.card img{
+width:80px;
 }
 
 button{
-background:lime;
+background:#22c55e;
 border:none;
-padding:10px;
+padding:10px 20px;
+border-radius:6px;
+color:white;
 cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+footer{
+margin-top:50px;
+padding:20px;
+background:#111827;
 }
