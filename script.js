@@ -1,5 +1,5 @@
 function buy(product){
 
-alert("You selected: " + product)
+alert("Order placed for: " + product)
 
 }
