@@ -1,174 +1,42 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-body{
-background:#0f172a;
-color:white;
-}
+const cards = document.querySelectorAll(".gift-card");
 
+cards.forEach(card => {
 
-/* NAVBAR */
+card.addEventListener("mousedown", () => {
+card.style.transform = "scale(0.95)";
+});
 
-.navbar{
-background:#020617;
-padding:18px;
-display:flex;
-justify-content:center;
-gap:50px;
-}
+card.addEventListener("mouseup", () => {
+card.style.transform = "scale(1)";
+});
 
-.nav-link{
-color:white;
-text-decoration:none;
-font-weight:bold;
-position:relative;
-}
+card.addEventListener("mouseleave", () => {
+card.style.transform = "scale(1)";
+});
 
-.nav-link::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-5px;
-width:0%;
-height:2px;
-background:#3b82f6;
-transition:0.3s;
-}
-
-.nav-link:hover{
-color:#3b82f6;
-}
-
-.nav-link:hover::after{
-width:100%;
-}
-
-.active{
-color:#3b82f6;
-}
-
-.active::after{
-width:100%;
-}
+});
 
 
-/* HERO */
+const buttons = document.querySelectorAll(".gift-card button");
 
-.hero{
-text-align:center;
-padding:120px 20px;
-}
+buttons.forEach(button => {
 
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
-}
+button.addEventListener("click", () => {
 
-.hero p{
-color:#cbd5f5;
-max-width:600px;
-margin:auto;
-}
+let text = button.innerText;
 
-.hero button{
-margin-top:30px;
-padding:12px 30px;
-background:#3b82f6;
-border:none;
-color:white;
-border-radius:8px;
-cursor:pointer;
-}
+button.innerText = "Added!";
+button.style.background = "#22c55e";
 
-.hero button:hover{
-background:#2563eb;
-}
+setTimeout(() => {
+button.innerText = text;
+button.style.background = "#3b82f6";
+},2000);
 
+});
 
-/* FEATURES */
+});
 
-.features{
-display:flex;
-justify-content:center;
-gap:40px;
-padding:80px;
-flex-wrap:wrap;
-}
-
-.feature-box{
-background:#1e293b;
-padding:30px;
-width:220px;
-border-radius:10px;
-text-align:center;
-transition:0.3s;
-}
-
-.feature-box:hover{
-transform:translateY(-10px);
-}
-
-
-/* SHOP */
-
-.shop-container{
-display:flex;
-justify-content:center;
-gap:30px;
-padding:80px;
-flex-wrap:wrap;
-}
-
-.gift-card{
-background:#1e293b;
-width:220px;
-padding:20px;
-border-radius:10px;
-text-align:center;
-transition:0.3s;
-}
-
-.gift-card img{
-width:80px;
-margin-bottom:10px;
-}
-
-.gift-card:hover{
-transform:scale(1.05);
-}
-
-.gift-card button{
-margin-top:10px;
-padding:10px 20px;
-border:none;
-background:#3b82f6;
-color:white;
-border-radius:6px;
-cursor:pointer;
-}
-
-.gift-card button:hover{
-background:#2563eb;
-}
-
-
-/* SUPPORT */
-
-.support{
-text-align:center;
-padding:120px;
-}
-
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:30px;
-background:#020617;
-color:#94a3b8;
-}
+});
