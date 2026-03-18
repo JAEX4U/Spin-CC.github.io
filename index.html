@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gift Card Store - Home</title>
+  <title>Gift Card Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -9,51 +9,32 @@
 
 <nav>
   <h2>🎁 Gift Store</h2>
-  <div>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="support.html">Support</a>
     <a href="updates.html">Updates</a>
+    <a href="terms.html">Terms</a>
   </div>
 </nav>
 
-<header>🔥 Premium Gift Cards Marketplace</header>
+<header>
+  <h1>🔥 Premium Gift Cards</h1>
+  <p>Trusted • Fast Delivery • Secure Deals</p>
+</header>
 
-<div class="container">
-
-  <!-- 20 Gift Cards -->
-
-  <div class="card"><h3>Amazon $5</h3><p>$5</p><button onclick="buy('Amazon $5 | ID001')">Buy Now</button></div>
-  <div class="card"><h3>Amazon $10</h3><p>$10</p><button onclick="buy('Amazon $10 | ID002')">Buy Now</button></div>
-  <div class="card"><h3>Amazon $25</h3><p>$25</p><button onclick="buy('Amazon $25 | ID003')">Buy Now</button></div>
-
-  <div class="card"><h3>Google Play $5</h3><p>$5</p><button onclick="buy('Google Play $5 | ID004')">Buy Now</button></div>
-  <div class="card"><h3>Google Play $10</h3><p>$10</p><button onclick="buy('Google Play $10 | ID005')">Buy Now</button></div>
-  <div class="card"><h3>Google Play $20</h3><p>$20</p><button onclick="buy('Google Play $20 | ID006')">Buy Now</button></div>
-
-  <div class="card"><h3>Steam $5</h3><p>$5</p><button onclick="buy('Steam $5 | ID007')">Buy Now</button></div>
-  <div class="card"><h3>Steam $10</h3><p>$10</p><button onclick="buy('Steam $10 | ID008')">Buy Now</button></div>
-  <div class="card"><h3>Steam $20</h3><p>$20</p><button onclick="buy('Steam $20 | ID009')">Buy Now</button></div>
-
-  <div class="card"><h3>iTunes $5</h3><p>$5</p><button onclick="buy('iTunes $5 | ID010')">Buy Now</button></div>
-  <div class="card"><h3>iTunes $10</h3><p>$10</p><button onclick="buy('iTunes $10 | ID011')">Buy Now</button></div>
-  <div class="card"><h3>iTunes $25</h3><p>$25</p><button onclick="buy('iTunes $25 | ID012')">Buy Now</button></div>
-
-  <div class="card"><h3>Netflix $10</h3><p>$10</p><button onclick="buy('Netflix $10 | ID013')">Buy Now</button></div>
-  <div class="card"><h3>Netflix $20</h3><p>$20</p><button onclick="buy('Netflix $20 | ID014')">Buy Now</button></div>
-
-  <div class="card"><h3>PlayStation $10</h3><p>$10</p><button onclick="buy('PSN $10 | ID015')">Buy Now</button></div>
-  <div class="card"><h3>PlayStation $25</h3><p>$25</p><button onclick="buy('PSN $25 | ID016')">Buy Now</button></div>
-
-  <div class="card"><h3>Xbox $10</h3><p>$10</p><button onclick="buy('Xbox $10 | ID017')">Buy Now</button></div>
-  <div class="card"><h3>Xbox $25</h3><p>$25</p><button onclick="buy('Xbox $25 | ID018')">Buy Now</button></div>
-
-  <div class="card"><h3>Spotify $10</h3><p>$10</p><button onclick="buy('Spotify $10 | ID019')">Buy Now</button></div>
-  <div class="card"><h3>Spotify $20</h3><p>$20</p><button onclick="buy('Spotify $20 | ID020')">Buy Now</button></div>
-
+<!-- CATEGORY BUTTONS -->
+<div class="category-buttons">
+  <button onclick="filterCategory('all')">All</button>
+  <button onclick="filterCategory('D')">D Cards</button>
+  <button onclick="filterCategory('C')">C Cards</button>
+  <button onclick="filterCategory('NFC')">NFC Cards</button>
+  <button onclick="filterCategory('OTP')">OTP Cards</button>
 </div>
 
+<div class="container" id="products"></div>
+
 <footer>
-  © 2026 Gift Store • Instant Delivery • Trusted Seller ✅
+  © 2026 Gift Store • Powered by Telegram Orders
 </footer>
 
 <script src="script.js"></script>
