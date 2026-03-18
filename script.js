@@ -3,7 +3,7 @@ const products = [
   {name:'Steam $20', subtitle:'Global Key • Fast', price:'$20', category:'C'},
   {name:'Google Play $25', subtitle:'Secure Delivery', price:'$25', category:'D'},
   {name:'iTunes $50', subtitle:'USA Only', price:'$50', category:'C'},
-
+  {name: 'VISA Primium', subtitle:'AU | BALANCE= $100', price:'$30', category:'D'},
   {name:'NFC Basic', subtitle:'Tap Enabled', price:'$30', category:'NFC'},
   {name:'NFC Pro', subtitle:'High Security', price:'$45', category:'NFC'},
 
