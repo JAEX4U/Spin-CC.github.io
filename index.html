@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gift Card Shop</title>
-  <style>
-    body { font-family: Arial; text-align: center; }
-    .card { border: 1px solid #ccc; padding: 15px; margin: 10px; }
-    button { padding: 10px; cursor: pointer; }
-  </style>
+  <title>Gift Card Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>🎁 Gift Card Store</h1>
+<header>
+  🎁 Premium Gift Card Store
+</header>
 
-<div class="card">
-  <h3>Amazon $10</h3>
-  <button onclick="buy('AMZ-111-AAA')">Buy</button>
+<div class="container">
+
+  <div class="card">
+    <h3>Amazon Gift Card</h3>
+    <div class="price">$10</div>
+    <button onclick="buy('Amazon $10')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <h3>Google Play Card</h3>
+    <div class="price">$5</div>
+    <button onclick="buy('Google Play $5')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <h3>Steam Gift Card</h3>
+    <div class="price">$20</div>
+    <button onclick="buy('Steam $20')">Buy Now</button>
+  </div>
+
 </div>
 
-<div class="card">
-  <h3>Google Play $5</h3>
-  <button onclick="buy('GPL-222-BBB')">Buy</button>
-</div>
+<footer>
+  © 2026 Gift Card Store • Secure & Fast Delivery
+</footer>
 
-<script>
-function buy(code) {
-  alert("Payment required!\nSend payment then contact admin.\n\nDemo Code: " + code);
-}
-</script>
+<!-- Link JS -->
+<script src="script.js"></script>
 
 </body>
 </html>
