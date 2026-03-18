@@ -1,93 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GiftCard Hub - Buy Digital Gift Cards in USD</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Gift Card Shop</title>
+  <style>
+    body { font-family: Arial; text-align: center; }
+    .card { border: 1px solid #ccc; padding: 15px; margin: 10px; }
+    button { padding: 10px; cursor: pointer; }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>GiftCard Hub USD</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="#cards">Gift Cards</a>
-        <a href="support.html">Support</a>
-      </nav>
-    </div>
-  </header>
 
-  <section id="hero">
-    <div class="container">
-      <h2>Instant Digital Gift Cards in USD</h2>
-      <p>Worldwide delivery via email. Perfect for global use — Amazon, Steam, Apple & more!</p>
-      <a href="#cards" class="btn">Shop Now</a>
-    </div>
-  </section>
+<h1>🎁 Gift Card Store</h1>
 
-  <section id="cards" class="container">
-    <h2>Popular USD Gift Cards</h2>
-    <div class="grid">
-      <!-- Amazon -->
-      <div class="gift-card">
-        <img src="https://images.unsplash.com/photo-1607082349566-187342859522?w=500" alt="Amazon">
-        <h3>Amazon $100</h3>
-        <p class="price">$95 <span>(5% off)</span></p>
-        <button class="btn buy-btn" data-name="Amazon $100" data-price="95">Buy Now</button>
-      </div>
+<div class="card">
+  <h3>Amazon $10</h3>
+  <button onclick="buy('AMZ-111-AAA')">Buy</button>
+</div>
 
-      <!-- Apple -->
-      <div class="gift-card">
-        <img src="https://images.unsplash.com/photo-1611162617210-7d7a39e9b1d7?w=500" alt="Apple">
-        <h3>Apple $50</h3>
-        <p class="price">$48 <span>(4% off)</span></p>
-        <button class="btn buy-btn" data-name="Apple $50" data-price="48">Buy Now</button>
-      </div>
+<div class="card">
+  <h3>Google Play $5</h3>
+  <button onclick="buy('GPL-222-BBB')">Buy</button>
+</div>
 
-      <!-- Steam -->
-      <div class="gift-card">
-        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500" alt="Steam">
-        <h3>Steam $200</h3>
-        <p class="price">$190 <span>(5% off)</span></p>
-        <button class="btn buy-btn" data-name="Steam $200" data-price="190">Buy Now</button>
-      </div>
+<script>
+function buy(code) {
+  alert("Payment required!\nSend payment then contact admin.\n\nDemo Code: " + code);
+}
+</script>
 
-      <!-- Visa Prepaid -->
-      <div class="gift-card">
-        <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd?w=500" alt="Visa">
-        <h3>Visa Prepaid $100</h3>
-        <p class="price">$98 <span>(2% off)</span></p>
-        <button class="btn buy-btn" data-name="Visa Prepaid $100" data-price="98">Buy Now</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close">×</span>
-      <h2>Checkout (Demo)</h2>
-      <p id="selected-item"></p>
-      <p>Total: <strong id="total-price"></strong></p>
-      <form id="checkout-form">
-        <label>Your Email:</label>
-        <input type="email" placeholder="you@example.com" required/>
-        <label>Recipient Email (optional):</label>
-        <input type="email" placeholder="friend@example.com"/>
-        <button type="submit" class="btn">Place Order (Demo Only)</button>
-      </form>
-      <p class="note">This is a learning demo — no real payment or card delivery happens!</p>
-    </div>
-  </div>
-
-  <footer>
-    <p>© 2026 GiftCard Hub USD Demo. Educational project only.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
