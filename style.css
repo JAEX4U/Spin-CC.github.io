@@ -1,22 +1,36 @@
+/* 🌌 ANIMATED BACKGROUND */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #0f172a;
   color: white;
+
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #9333ea);
+  background-size: 400% 400%;
+  animation: bgMove 12s ease infinite;
 }
 
-/* NAV */
+/* 🎞 BACKGROUND ANIMATION */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 20px;
-  background: #111827;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
 }
 
 .nav-links a {
   margin-left: 15px;
   color: #e5e7eb;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -29,7 +43,7 @@ header {
   padding: 30px;
 }
 
-/* PAGE BOXES */
+/* PAGE BOXES (GLASS) */
 .page-boxes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -38,21 +52,23 @@ header {
 }
 
 .box {
-  background: #1f2937;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
   padding: 20px;
   border-radius: 12px;
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .box:hover {
-  transform: translateY(-5px);
-  background: #374151;
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(14,165,233,0.6);
 }
 
 .box p {
-  color: #9ca3af;
+  color: #cbd5f5;
 }
 
 /* CATEGORY BUTTONS */
@@ -68,9 +84,16 @@ header {
   padding: 10px 15px;
   border-radius: 20px;
   border: none;
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
   color: white;
   cursor: pointer;
+
+  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  transition: 0.3s;
+}
+
+.category-buttons button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(59,130,246,0.8);
 }
 
 /* PRODUCT GRID */
@@ -81,28 +104,113 @@ header {
   padding: 20px;
 }
 
-/* CARD */
+/* CARD (GLASS) */
 .card {
-  background: #1f2937;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
   padding: 15px;
   border-radius: 12px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* BUTTON */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(14,165,233,0.6);
+}
+
+/* 🔥 PREMIUM ANIMATED BUTTON */
 button {
-  padding: 10px;
+  padding: 12px;
   width: 100%;
-  background: #3b82f6;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   color: white;
   cursor: pointer;
   margin-top: 10px;
+  font-weight: 600;
+
+  background: linear-gradient(45deg, #06b6d4, #3b82f6, #9333ea);
+  background-size: 300% 300%;
+
+  animation: gradientMove 4s ease infinite;
+  transition: 0.3s;
+}
+
+/* 🌈 BUTTON ANIMATION */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* HOVER */
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 15px rgba(59,130,246,0.7),
+              0 0 25px rgba(147,51,234,0.6);
+}
+
+/* CLICK */
+button:active {
+  transform: scale(0.95);
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 15px;
-  background: #111827;
+  background: rgba(0,0,0,0.4);
+  margin-top: 20px;
+}
+
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .page-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .category-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-buttons button {
+    width: 90%;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+}
+
+/* ========================= */
+/* 💻 DESKTOP */
+/* ========================= */
+@media (min-width: 1024px) {
+
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .page-boxes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
 }
