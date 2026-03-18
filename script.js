@@ -11,7 +11,7 @@ const products = [
   {name:'OTP Pro', subtitle:'High Success Rate', price:'$25', category:'OTP'}
 ];
 
-function render(f='all'){
+function render(f='D'){
   const c=document.getElementById('products');
   if(!c) return;
   c.innerHTML='';
