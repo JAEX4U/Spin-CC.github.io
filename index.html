@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gift Card Store</title>
+  <title>Gift Card Store - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Link CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-  🎁 Premium Gift Card Store
-</header>
+<nav>
+  <h2>🎁 Gift Store</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="support.html">Support</a>
+    <a href="updates.html">Updates</a>
+  </div>
+</nav>
+
+<header>Premium Gift Cards</header>
 
 <div class="container">
-
   <div class="card">
     <h3>Amazon Gift Card</h3>
-    <div class="price">$10</div>
+    <p>$10</p>
     <button onclick="buy('Amazon $10')">Buy Now</button>
   </div>
 
   <div class="card">
     <h3>Google Play Card</h3>
-    <div class="price">$5</div>
+    <p>$5</p>
     <button onclick="buy('Google Play $5')">Buy Now</button>
   </div>
 
   <div class="card">
-    <h3>Steam Gift Card</h3>
-    <div class="price">$20</div>
+    <h3>Steam Card</h3>
+    <p>$20</p>
     <button onclick="buy('Steam $20')">Buy Now</button>
   </div>
-
 </div>
 
-<footer>
-  © 2026 Gift Card Store • Secure & Fast Delivery
-</footer>
+<footer>© 2026 Gift Store</footer>
 
-<!-- Link JS -->
 <script src="script.js"></script>
-
 </body>
 </html>
