@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Updates - Gift Store</title>
+  <title>Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -9,36 +9,33 @@
 
 <nav>
   <h2>🎁 Gift Store</h2>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="support.html">Support</a>
-    <a href="terms.html">Terms</a>
+  <div class="nav-boxes">
+    <div class="nav-box" onclick="goPage('index.html')">🏠 Home</div>
+    <div class="nav-box" onclick="goPage('support.html')">📞 Support</div>
+    <div class="nav-box" onclick="goPage('updates.html')">📢 Updates</div>
+    <div class="nav-box" onclick="goPage('terms.html')">📜 Terms</div>
   </div>
 </nav>
 
 <header>
-  <h1>📢 Latest Updates</h1>
-  <p>Stay updated with new offers</p>
+  <h1>📞 Support</h1>
 </header>
 
 <div class="container">
   <div class="card">
-    <h3>🔥 New Cards Added</h3>
-    <p>We added 20+ new gift cards in all categories.</p>
-  </div>
-
-  <div class="card">
-    <h3>⚡ Fast Delivery</h3>
-    <p>All orders are now processed faster than before.</p>
-  </div>
-
-  <div class="card">
-    <h3>💎 Premium Quality</h3>
-    <p>All cards are tested and verified.</p>
+    <h3>Contact Us</h3>
+    <button onclick="contact()">Chat on Telegram</button>
   </div>
 </div>
 
 <footer>© 2026 Gift Store</footer>
+
+<script>
+function goPage(p){window.location.href=p;}
+function contact(){
+  window.open("https://t.me/Spin011_cc","_blank");
+}
+</script>
 
 </body>
 </html>
