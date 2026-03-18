@@ -1,25 +1,39 @@
 const products = [
 
+  // D CATEGORY
   {name: 'Amazon D Card $10', price: '$10', category: 'D'},
   {name: 'Amazon D Card $25', price: '$25', category: 'D'},
   {name: 'Visa D Card $20', price: '$20', category: 'D'},
+  {name: 'Apple D Card $15', price: '$15', category: 'D'},
+  {name: 'eBay D Card $30', price: '$30', category: 'D'},
+  {name: 'Walmart D Card $50', price: '$50', category: 'D'},
 
+  // C CATEGORY
   {name: 'MasterCard C $15', price: '$15', category: 'C'},
   {name: 'Google Play C $5', price: '$5', category: 'C'},
   {name: 'Steam C $20', price: '$20', category: 'C'},
+  {name: 'PlayStation C $25', price: '$25', category: 'C'},
+  {name: 'Xbox C $30', price: '$30', category: 'C'},
+  {name: 'Razer Gold C $10', price: '$10', category: 'C'},
 
+  // NFC CATEGORY
   {name: 'NFC Tap Card Basic', price: '$25', category: 'NFC'},
   {name: 'NFC Tap Card Pro', price: '$40', category: 'NFC'},
+  {name: 'NFC Tap Card Elite', price: '$60', category: 'NFC'},
+  {name: 'Contactless NFC Lite', price: '$20', category: 'NFC'},
+  {name: 'Contactless NFC Max', price: '$50', category: 'NFC'},
 
+  // OTP CATEGORY
   {name: 'OTP Card Basic', price: '$8', category: 'OTP'},
-  {name: 'OTP Card Premium', price: '$18', category: 'OTP'}
+  {name: 'OTP Card Standard', price: '$12', category: 'OTP'},
+  {name: 'OTP Card Premium', price: '$18', category: 'OTP'},
+  {name: 'OTP Secure Card Pro', price: '$25', category: 'OTP'},
+  {name: 'OTP Verified Card Max', price: '$35', category: 'OTP'}
 
 ];
 
 function render(filter = 'all') {
   const container = document.getElementById('products');
-  if (!container) return;
-
   container.innerHTML = '';
 
   products
@@ -46,6 +60,10 @@ function filterCategory(cat) {
 function buy(item) {
   const url = "https://t.me/Spin011_cc?text=" + encodeURIComponent("I want to buy " + item);
   window.open(url, '_blank');
+}
+
+function goPage(page) {
+  window.location.href = page;
 }
 
 render();
