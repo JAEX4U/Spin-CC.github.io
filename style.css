@@ -1,40 +1,25 @@
-/* 🌌 ANIMATED BACKGROUND */
+/* 🌌 BACKGROUND */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   color: white;
-
   background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #9333ea);
   background-size: 400% 400%;
-  animation: bgMove 12s ease infinite;
+  animation: bgMove 20s ease infinite;
 }
 
-/* 🎞 BACKGROUND ANIMATION */
 @keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
+  justify-content: center;
+  padding: 15px;
   background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(10px);
-}
-
-.nav-links a {
-  margin-left: 15px;
-  color: #e5e7eb;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #38bdf8;
 }
 
 /* HEADER */
@@ -43,7 +28,7 @@ header {
   padding: 30px;
 }
 
-/* PAGE BOXES (GLASS) */
+/* BOXES */
 .page-boxes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -53,50 +38,37 @@ header {
 
 .box {
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 12px;
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
-  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .box:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(14,165,233,0.6);
 }
 
-.box p {
-  color: #cbd5f5;
-}
-
-/* CATEGORY BUTTONS */
+/* CATEGORY */
 .category-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 10px 20px;
+  padding: 10px;
 }
 
 .category-buttons button {
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 20px;
   border: none;
   color: white;
-  cursor: pointer;
-
   background: linear-gradient(45deg, #06b6d4, #3b82f6);
-  transition: 0.3s;
 }
 
-.category-buttons button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(59,130,246,0.8);
-}
-
-/* PRODUCT GRID */
+/* PRODUCTS */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -104,113 +76,40 @@ header {
   padding: 20px;
 }
 
-/* CARD (GLASS) */
 .card {
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
   padding: 15px;
   border-radius: 12px;
-  transition: 0.3s;
-  border: 1px solid rgba(255,255,255,0.1);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(14,165,233,0.6);
-}
-
-/* 🔥 PREMIUM ANIMATED BUTTON */
+/* BUTTON */
 button {
-  padding: 12px;
+  padding: 10px;
   width: 100%;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   color: white;
   cursor: pointer;
   margin-top: 10px;
-  font-weight: 600;
-
   background: linear-gradient(45deg, #06b6d4, #3b82f6, #9333ea);
   background-size: 300% 300%;
-
-  animation: gradientMove 4s ease infinite;
-  transition: 0.3s;
+  animation: gradientMove 4s infinite;
 }
 
-/* 🌈 BUTTON ANIMATION */
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* HOVER */
-button:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 0 15px rgba(59,130,246,0.7),
-              0 0 25px rgba(147,51,234,0.6);
-}
-
-/* CLICK */
-button:active {
-  transform: scale(0.95);
+  0% {background-position:0%}
+  50% {background-position:100%}
+  100% {background-position:0%}
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 15px;
-  background: rgba(0,0,0,0.4);
-  margin-top: 20px;
 }
 
-/* ========================= */
-/* 📱 MOBILE */
-/* ========================= */
+/* MOBILE */
 @media (max-width: 768px) {
-
-  nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav-links {
-    margin-top: 10px;
-  }
-
-  .page-boxes {
-    grid-template-columns: 1fr;
-  }
-
-  .category-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .category-buttons button {
-    width: 90%;
-  }
-
-  .container {
-    grid-template-columns: 1fr;
-  }
-
-  header h1 {
-    font-size: 22px;
-  }
-}
-
-/* ========================= */
-/* 💻 DESKTOP */
-/* ========================= */
-@media (min-width: 1024px) {
-
-  .container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .page-boxes {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
+  .page-boxes {grid-template-columns:1fr;}
+  .container {grid-template-columns:1fr;}
 }
