@@ -58,25 +58,24 @@ header {
   justify-content: center;
   gap: 10px;
   padding: 10px;
-  flex-wrap: nowrap;          /* NO wrapping */
-  overflow-x: auto;           /* allow horizontal scroll if needed */
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+  flex-wrap: nowrap;          /* stay in one line */
 }
 
 .category-buttons button {
-  padding: 10px 15px;
+  padding: 8px 12px;           /* smaller padding */
   border: none;
   border-radius: 20px;
   background: #3b82f6;
   color: white;
   cursor: pointer;
   transition: 0.3s;
-  flex-shrink: 0;             /* prevent shrinking */
+  flex: 1 1 auto;              /* shrink to fit available space */
+  min-width: 80px;             /* optional minimum size */
+  text-align: center;
 }
 
 .category-buttons button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 0 10px #3b82f6;
 }
 
@@ -188,7 +187,6 @@ footer {
     margin-top: 10px;
   }
 
-  /* horizontal scroll looks nice on mobile */
   .category-buttons {
     gap: 8px;
     padding: 8px;
