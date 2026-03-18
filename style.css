@@ -5,6 +5,7 @@ body {
   color: white;
 }
 
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
@@ -15,7 +16,6 @@ nav {
 .nav-links a {
   margin-left: 15px;
   color: #e5e7eb;
-  cursor: pointer;
   text-decoration: none;
 }
 
@@ -23,9 +23,36 @@ nav {
   color: #38bdf8;
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 30px;
+}
+
+/* PAGE BOXES */
+.page-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.box {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  background: #374151;
+}
+
+.box p {
+  color: #9ca3af;
 }
 
 /* CATEGORY BUTTONS */
@@ -46,6 +73,7 @@ header {
   cursor: pointer;
 }
 
+/* PRODUCT GRID */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -53,12 +81,14 @@ header {
   padding: 20px;
 }
 
+/* CARD */
 .card {
   background: #1f2937;
   padding: 15px;
   border-radius: 12px;
 }
 
+/* BUTTON */
 button {
   padding: 10px;
   width: 100%;
@@ -70,6 +100,7 @@ button {
   margin-top: 10px;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 15px;
