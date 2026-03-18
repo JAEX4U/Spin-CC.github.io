@@ -52,13 +52,14 @@ header {
   padding: 20px;
 }
 
-/* CATEGORY BUTTONS */
+/* CATEGORY BUTTONS HORIZONTAL */
 .category-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
   padding: 10px;
-  flex-wrap: wrap;
+  overflow-x: auto; /* allow horizontal scroll if too many */
+  white-space: nowrap;
 }
 
 .category-buttons button {
@@ -69,6 +70,7 @@ header {
   color: white;
   cursor: pointer;
   transition: 0.3s;
+  flex-shrink: 0; /* prevent shrinking in horizontal row */
 }
 
 .category-buttons button:hover {
@@ -182,5 +184,11 @@ footer {
   .nav-boxes {
     justify-content: center;
     margin-top: 10px;
+  }
+
+  /* Horizontal scrolling for category buttons on mobile */
+  .category-buttons {
+    gap: 8px;
+    padding: 8px;
   }
 }
