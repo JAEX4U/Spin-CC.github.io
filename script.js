@@ -1,51 +1,40 @@
 const products = [
+  {name:'Amazon $10', subtitle:'Instant Delivery • USA', price:'$10', category:'D'},
+  {name:'Steam $20', subtitle:'Global Key • Fast', price:'$20', category:'C'},
+  {name:'Google Play $25', subtitle:'Secure Email Delivery', price:'$25', category:'D'},
+  {name:'iTunes $50', subtitle:'USA Only • Verified', price:'$50', category:'C'},
 
-  {name:'Amazon D $10',price:'$10',category:'D'},
-  {name:'Amazon D $25',price:'$25',category:'D'},
-  {name:'Visa D $20',price:'$20',category:'D'},
+  {name:'NFC Basic', subtitle:'Tap Enabled Card', price:'$30', category:'NFC'},
+  {name:'NFC Pro', subtitle:'High Security NFC', price:'$45', category:'NFC'},
 
-  {name:'MasterCard C $15',price:'$15',category:'C'},
-  {name:'Google Play C $5',price:'$5',category:'C'},
-  {name:'Steam C $20',price:'$20',category:'C'},
-
-  {name:'NFC Basic',price:'$25',category:'NFC'},
-  {name:'NFC Pro',price:'$40',category:'NFC'},
-
-  {name:'OTP Basic',price:'$8',category:'OTP'},
-  {name:'OTP Premium',price:'$18',category:'OTP'}
-
+  {name:'OTP Basic', subtitle:'SMS Verified', price:'$15', category:'OTP'},
+  {name:'OTP Pro', subtitle:'High Success Rate', price:'$25', category:'OTP'}
 ];
 
-function render(filter='all'){
-  const container=document.getElementById('products');
-  container.innerHTML='';
-
-  products
-  .filter(p=>filter==='all'||p.category===filter)
+function render(f='all'){
+  const c=document.getElementById('products');
+  if(!c) return;
+  c.innerHTML='';
+  products.filter(p=>f==='all'||p.category===f)
   .forEach(p=>{
-    const div=document.createElement('div');
-    div.className='card';
-
-    div.innerHTML=`
+    c.innerHTML+=`
+    <div class="card">
       <h3>${p.name}</h3>
-      <p>${p.price}</p>
+      <p class="subtitle">${p.subtitle}</p>
+      <p class="price">${p.price}</p>
       <button onclick="buy('${p.name}')">Buy</button>
-    `;
-
-    container.appendChild(div);
+    </div>`;
   });
 }
 
-function filterCategory(cat){
-  render(cat);
+function filterCategory(c){render(c);}
+
+function buy(i){
+  window.open("https://t.me/Spin011_cc?text="+i);
 }
 
-function buy(item){
-  window.open("https://t.me/Spin011_cc?text="+encodeURIComponent(item),'_blank');
-}
-
-function goPage(page){
-  window.location.href=page;
+function goPage(p){
+  window.location.href=p;
 }
 
 render();
