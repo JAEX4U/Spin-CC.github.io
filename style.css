@@ -116,9 +116,9 @@ header {
   font-weight: bold;
   margin-bottom: 8px;
 }
-.detail {
+.details {
   color: #64d68e;
-  font-weight: italic;
+  font-style: italic;
   margin-bottom: 7px;
 }
 
