@@ -23,6 +23,7 @@ function render(f='D'){
     <div class="card">
       <h3>${p.name}</h3>
       <p class="subtitle">${p.subtitle}</p>
+      <p class="details">${p.detail}</p>
       <p class="price">${p.price}</p>
       <button onclick="buy('${p.name}')">Buy</button>
     </div>`;
