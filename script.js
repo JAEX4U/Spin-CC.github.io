@@ -2,7 +2,7 @@ const products = [
   {name:'Amazon $10', subtitle:'Instant Delivery • USA', price:'$10', detail:'ZIP', category:'D'},
   {name:'Steam $20', subtitle:'Global Key • Fast', price:'$20', detail:'ZIP', category:'C'},
   {name:'Google Play $25', subtitle:'Secure Delivery', price:'$25', detail:'ZIP', category:'D'},
-  {name:'IDAHO CENTRAL CREDIT UNION', subtitle:'APP,Instant minics, Alerts, Travel center, SSN+DOB', price:'$50', detail:'ZIP', category:'C'},
+  {name:'IDAHO CENTRAL CREDIT UNION', subtitle:'APP,Instant minics, Alerts, Travel center, SSN+DOB', price:'$50', detail:'Available - 3458.53, STATE - ID, ZIP-83204', category:'C'},
   {name:'VISA Primium', subtitle:'AU | BALANCE= $100', price:'$30', detail:'ZIP', category:'D'},
   
   {name:'NFC Basic', subtitle:'Tap Enabled', price:'$30', detail:'ZIP', category:'NFC'},
