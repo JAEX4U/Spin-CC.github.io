@@ -3,9 +3,8 @@ body {
   margin: 0;
   font-family: sans-serif;
   color: white;
-  background: linear-gradient(-45deg,#0f172a,#1e3a8a,#0ea5e9,#9333ea);
+  background: #FFFFFF
   background-size: 400% 400%;
-  animation: bg 10s ease infinite;
 }
 
 @keyframes bg {
