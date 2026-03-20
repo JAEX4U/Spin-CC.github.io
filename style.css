@@ -126,7 +126,7 @@ button {
   width: 100%;
   padding: 10px;
   border: none;
-  background: linear-gradient(45deg,#06b6d4,#3b82f6,#9333ea);
+  background: #02c202;
   color: white;
   border-radius: 8px;
   cursor: pointer;
