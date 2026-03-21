@@ -126,7 +126,7 @@ header {
   border-radius: 8px;       /* optional: rounded corners */
   padding: 12px;            /* space inside the border */
   margin: 10px;             /* space between cards */
-  background-color: #f9f9f9; /* optional: light background */
+  background-color: #525e5b; /* optional: light background */
 }
 
 .bordered-text {
