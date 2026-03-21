@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   color: white;
-  background: #3d85c6;
+  background: url('https://i.ibb.co/LzXLVyVc/image.jpg') no-repeat center center fixed;
   background-size: 400% 400%;
 }
 
