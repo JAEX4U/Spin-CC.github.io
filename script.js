@@ -1,9 +1,9 @@
 const products = [
-  {name:'BRELLA', subtitle:'MASTERCARD|DEBIT|CLASSIC,Set Alerts & Block to our email and phone number for Transaction Amount, Internet & Phone transactions, Transactions Outsite U.S. Travel Notice, SSN + DOB', price:'$10', detail:'Available - Unknown, STATE - AR, ZIP-72315', category:'D'},
+  {name:'BRELLA', subtitle:'MASTERCARD|DEBIT|CLASSIC, Set Alerts & Block to our email and phone number for Transaction Amount, Internet & Phone transactions, Transactions Outside U.S. Travel Notice, SSN + DOB', price:'$10', detail:'Available - Unknown, STATE - AR, ZIP-72315', category:'D'},
   {name:'Steam $20', subtitle:'Global Key • Fast', price:'$20', detail:'ZIP', category:'C'},
   {name:'Google Play $25', subtitle:'Secure Delivery', price:'$25', detail:'ZIP', category:'D'},
-  {name:'IDAHO CENTRAL CREDIT UNION', subtitle:'APP,Instant minics, Alerts, Travel center, SSN+DOB', price:'$50', detail:'Available - 3458.53, STATE - ID, ZIP-83204', category:'C'},
-  {name:'VISA Primium', subtitle:'AU | BALANCE= $100', price:'$30', detail:'ZIP', category:'D'},
+  {name:'IDAHO CENTRAL CREDIT UNION', subtitle:'APP, Instant minics, Alerts, Travel center, SSN+DOB', price:'$50', detail:'Available - 3458.53, STATE - ID, ZIP-83204', category:'C'},
+  {name:'VISA Premium', subtitle:'AU | BALANCE= $100', price:'$30', detail:'ZIP', category:'D'},
   
   {name:'NFC Basic', subtitle:'Tap Enabled', price:'$30', detail:'ZIP', category:'NFC'},
   {name:'NFC Pro', subtitle:'High Security', price:'$45', detail:'ZIP', category:'NFC'},
@@ -21,7 +21,7 @@ function render(f='D'){
   .forEach(p=>{
     c.innerHTML+=`
     <div class="card">
-      <h3>${p.name}</h3>
+      <h3 class="bordered-text">${p.name}</h3>
       <p class="subtitle">${p.subtitle}</p>
       <p class="details">${p.detail}</p>
       <p class="price">${p.price}</p>
