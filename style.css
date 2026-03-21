@@ -168,6 +168,32 @@ footer {
   to { filter: drop-shadow(0 0 20px #0ea5e9); }
 }
 
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4b4b6a;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px #0ea5e9;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
 /* 📱 TABLET */
 @media (max-width: 1024px) {
   .container {
