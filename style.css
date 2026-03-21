@@ -63,7 +63,7 @@ header {
 .category-buttons button {
   padding: 8px 12px;           /* smaller padding */
   border: none;
-  border-radius: 20px;
+  border-radius: 0px;
   background: #3b82f6;
   color: white;
   cursor: pointer;
@@ -93,14 +93,9 @@ header {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
   padding: 15px;
-  border-radius: 12px;
+  border-radius: 0px;
   transition: 0.3s;
   border: 1px solid rgba(255,255,255,0.1);
- 
-  aspect-ratio: 1 / 1;   /* 🔥 makes it square */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .card:hover {
@@ -124,20 +119,6 @@ header {
   color: #a8b8bf;
   font-style: Normal;
   margin-bottom: 7px;
-}
-
-.card {
-  border: 2px solid #333;   /* thickness, style, color */
-  border-radius: 8px;       /* optional: rounded corners */
-  padding: 12px;            /* space inside the border */
-  margin: 10px;             /* space between cards */
-  background-color: #525e5b; /* optional: light background */
-}
-
-.bordered-text {
-  color: white;
-  -webkit-text-stroke: 2px black; /* border thickness + color */
-  font-size: 18px;
 }
 
 /* 🔥 BUTTON */
