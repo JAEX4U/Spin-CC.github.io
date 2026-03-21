@@ -30,6 +30,15 @@ function render(f='D'){
   });
 }
 
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+// show popup when page loads
+window.onload = function () {
+  document.getElementById("popup").style.display = "flex";
+};
+
 function filterCategory(c){render(c);}
 
 function buy(i){
