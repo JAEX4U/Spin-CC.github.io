@@ -7,12 +7,6 @@ body {
   background-size: 400% 400%;
 }
 
-@keyframes bg {
-  0% { background-position: 0% }
-  50% { background-position: 100% }
-  100% { background-position: 0% }
-}
-
 /* 🧱 NAVBAR */
 nav {
   display: flex;
@@ -51,26 +45,23 @@ header {
   padding: 20px;
 }
 
-/* CATEGORY BUTTONS HORIZONTAL LINE */
+/* CATEGORY BUTTONS */
 .category-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
   padding: 10px;
-  flex-wrap: nowrap;          /* stay in one line */
 }
 
 .category-buttons button {
-  padding: 8px 12px;           /* smaller padding */
+  padding: 8px 12px;
   border: none;
   border-radius: 20px;
   background: #3b82f6;
   color: white;
   cursor: pointer;
   transition: 0.3s;
-  flex: 1 1 auto;              /* shrink to fit available space */
-  min-width: 80px;             /* optional minimum size */
-  text-align: center;
+  min-width: 80px;
 }
 
 .category-buttons button:hover {
@@ -78,7 +69,7 @@ header {
   box-shadow: 0 0 10px #3b82f6;
 }
 
-/* 🛒 PRODUCT GRID (MAX 5 PER ROW) */
+/* 🛒 PRODUCT GRID */
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -95,7 +86,8 @@ header {
   padding: 15px;
   border-radius: 12px;
   transition: 0.3s;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 2px solid #333;   /* clear border */
+  margin: 10px;
 }
 
 .card:hover {
@@ -115,23 +107,16 @@ header {
   font-weight: bold;
   margin-bottom: 8px;
 }
+
 .details {
   color: #a8b8bf;
-  font-style: Normal;
   margin-bottom: 7px;
 }
 
-.card {
-  border: 2px solid #333;   /* thickness, style, color */
-  border-radius: 8px;       /* optional: rounded corners */
-  padding: 12px;            /* space inside the border */
-  margin: 10px;             /* space between cards */
-  background-color: #f9f9f9; /* optional: light background */
-}
-
+/* Outlined product name text */
 .bordered-text {
   color: white;
-  -webkit-text-stroke: 2px black; /* border thickness + color */
+  -webkit-text-stroke: 2px black;
   font-size: 18px;
 }
 
@@ -157,29 +142,6 @@ footer {
   text-align: center;
   padding: 10px;
   margin-top: 20px;
-}
-
-/* ✈️ TELEGRAM LOGO ANIMATION */
-.telegram-logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
-.telegram-logo img {
-  width: 80px;
-  animation: float 3s ease-in-out infinite, glow 2s infinite alternate;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes glow {
-  from { filter: drop-shadow(0 0 5px #0ea5e9); }
-  to { filter: drop-shadow(0 0 20px #0ea5e9); }
 }
 
 /* 📱 TABLET */
