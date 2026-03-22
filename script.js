@@ -38,6 +38,7 @@ function closePopup() {
 window.onload = function () {
   document.getElementById("popup").style.display = "flex";
   localStorage.setItem("popupShown", "true");
+  }
 };
 
 function filterCategory(c){render(c);}
