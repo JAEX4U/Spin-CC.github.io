@@ -36,8 +36,9 @@ function closePopup() {
 
 // show popup when page loads
 window.onload = function () {
-  document.getElementById("popup").style.display = "flex";
-  localStorage.setItem("popupShown", "true");
+  if (!localStorage.getItem("popupShown")) {
+    document.getElementById("popup").style.display = "flex";
+    localStorage.setItem("popupShown", "true");
   }
 };
 
